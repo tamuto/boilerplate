@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.html",
   "scripts": {
-    "setup": "poetry install",
+    "setup": "infodb-cli runall setup:*",
+    "setup:frontend": "npm install",
+    "setup:backend": "poetry install",
     "eslint": "eslint --ext .js --ignore-path .gitignore frontend",
     "build": "infodb-cli runall build:*",
     "build:es": "infodb-cli es -i frontend/main.js --source-map",
