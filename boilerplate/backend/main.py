@@ -15,6 +15,11 @@ async def root():
     return RedirectResponse('/static')
 
 
+@app.get('/api/hello')
+async def hello():
+    return {'message': 'hello'}
+
+
 @app.get('/api/sample')
 async def get_sample():
     result = execute_sql(
