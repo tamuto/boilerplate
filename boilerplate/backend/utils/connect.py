@@ -1,25 +1,23 @@
-import json
-import sqlalchemy
-
+from sqlalchemy import create_engine
+from sqlalchemy.orm import scoped_session, sessionmaker
 from sqlalchemy.sql import text
 
+from . import config
 
-engine = sqlalchemy.create_engine(
-    'mysql+pymysql://root:password@denv.host/sample?charset=utf8',
-    echo=True)
+engine = create_engine(
+    config.get_DB_CONN(),
+    echo=False)
+
+session = scoped_session(
+    sessionmaker(
+        bind=engine
+    )
+)
 
 
 def execute_sql(sql, params=None):
-    return engine.execute(text(sql), params)
+    return session().execute(text(sql), params).mappings()
 
 
 def read_as_dict(result):
-    return [
-        {
-            column: value
-            for column, value in row.items()
-        } for row in result]
-
-
-def to_json(data):
-    return json.dumps(data, ensure_ascii=False)
+    return [{k: v for k, v in row.items()} for row in result]

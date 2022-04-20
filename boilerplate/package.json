@@ -1,6 +1,6 @@
 {
   "name": "boilerplate",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "",
   "main": "index.html",
   "scripts": {
@@ -11,10 +11,10 @@
     "build": "infodb-cli runall build:*",
     "build:es": "infodb-cli es -i frontend/main.js --source-map",
     "build:minify": "infodb-cli minify -i frontend/index.html",
-    "serve": "poetry run python -m uvicorn --host 0.0.0.0 backend.main:app"
+    "serve": "etc/run_ap.sh"
   },
-  "author": "tamuto",
-  "license": "NO LICENSED",
+  "author": "<YourName>",
+  "license": "SEE LICENSE IN YourLicense.txt",
   "dependencies": {
     "@emotion/react": "^11.7.1",
     "@emotion/styled": "^11.6.0",
