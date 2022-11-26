@@ -1,7 +1,7 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
+import { createRoot } from 'react-dom/client'
 
-ReactDOM.render(
-    <p>This is Boilerplate</p>,
-    document.getElementById('app')
+root = createRoot(document.getElementById('app'))
+root.render(
+    <p>This is Boilerplate</p>
 )
