@@ -24,7 +24,7 @@ if config.get_CORS() == '1':
 
 @app.get('/')
 def root():
-    return RedirectResponse('/static')
+    return RedirectResponse('/static/')
 
 
 @app.get('/api/hello')
