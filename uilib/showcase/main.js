@@ -16,6 +16,7 @@ import {
 
 import Menu from './components/Menu'
 import Unsplash from './components/Unsplash'
+import DataRow from './components/DataRow'
 
 const theme = createTheme()
 
@@ -24,11 +25,12 @@ root.render(
   <>
     <CssBaseline />
     <ThemeProvider theme={theme}>
-      <Container>
+      <Container sx={{ my: 3 }}>
         <HashRouter>
           <Routes>
             <Route path='/' element={<Menu />} />
             <Route path='/unsplash' element={<Unsplash />} />
+            <Route path='/datarow' element={<DataRow />} />
           </Routes>
         </HashRouter>
       </Container>

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Unsplash from '../../unsplash/Unsplash'
+import Unsplash from '../../components/unsplash/Unsplash'
 
 const ShowCase = () => {
   return (
