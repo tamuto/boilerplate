@@ -7,8 +7,9 @@ import {
 
 const Menu = () => {
   return (
-    <Stack>
-      <Button component={Link} to='/unsplash'>Unsplash</Button>
+    <Stack spacing={2}>
+      <Button variant='contained' component={Link} to='/unsplash'>Unsplash</Button>
+      <Button variant='contained' component={Link} to='/datarow'>DataRow</Button>
     </Stack>
   )
 }
