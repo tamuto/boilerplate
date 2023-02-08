@@ -6,6 +6,8 @@ const StyledDiv = styled.div`
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  margin-top: auto;
+  margin-bottom: auto;
 `
 
 const DataCell = ({ children, ...props }) => {
