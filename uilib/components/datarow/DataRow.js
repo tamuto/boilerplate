@@ -1,9 +1,10 @@
 import React from 'react'
 import styled from '@emotion/styled'
 
-import { Stack } from '@mui/material'
-
-const StyledStack = styled(Stack)`
+const StyledStack = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 0 5px;
 `
 
 const DataRow = ({ children, ...props }) => {

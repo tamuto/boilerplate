@@ -1,10 +1,11 @@
 import React from 'react'
 import styled from '@emotion/styled'
 
-import { Stack } from '@mui/material'
-
-const StyledStack = styled(Stack)`
+const StyledStack = styled.div`
+  display: flex;
+  flex-direction: row;
   font-weight: bold;
+  gap: 0 5px;
 `
 
 const DataHead = ({ children, ...props }) => {
