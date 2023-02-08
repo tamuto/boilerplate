@@ -10,7 +10,7 @@ const DataTable = styled.div`
     border-bottom: solid 1px grey;
   }
 
-  & .DataRow:nth-child(odd) {
+  & .DataRow:nth-of-type(odd) {
     background-color: #eeeeee;
   }
 `
